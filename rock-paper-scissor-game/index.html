@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ROCK! PAPER! SCISSORS!</h1>
+    <script>
+        const variants = ['rock','paper', 'scissors'];
+        let humanScore =0;
+        let computerScore = 0;
+        console.log("Welcome to the game!")
+        console.log("Open a console (Ctrl+Shift+I) to enter the game!");
+        function getComputerChoice(){
+            const computerChoice = Math.floor(Math.random()*variants.length);
+            return variants[computerChoice];
+        }
+        function getHumanChoice(){
+            const humanChoice = (prompt("Enter your choice (rock, paper, or scissors): ").toLocaleLowerCase())||'';
+            if (!variants.includes(humanChoice)) {
+                console.log('Human Choice is unrecognized')
+                return;
+            }
+            return humanChoice;
+        }
+        function playRound(humanChoice, computerChoice) {
+            switch(humanChoice){
+                case 'rock':
+                    if(computerChoice === 'paper'){
+                        computerScore++;
+                        console.log(`Human lose - computer win! Paper beats Rock`);
+                    }else if(computerChoice == 'scissors'){
+                        humanScore++;
+                        console.log(`Human win - computer loose! Rock beats Scissors`);
+                    }else{
+                        console.log('Draw')
+                    }
+                break;
+                case 'paper':
+                    if(computerChoice === 'scissors'){
+                        computerScore++;
+                        console.log(`Human lose - computer win! Scissors beats Paper`);
+                    }else if(computerChoice == 'rock'){
+                        humanScore++;
+                        console.log(`Human win - computer loose! Paper beats Rock`);
+                    }
+                    else{
+                        console.log('Draw')
+                    }
+                break;
+                case 'scissors':
+                    if(computerChoice === 'rock'){
+                        computerScore++;
+                        console.log(`Human lose - computer win! Rock beats Scissors`);
+                    }else if(computerChoice == 'paper'){
+                        humanScore++;
+                        console.log(`Human win - computer loose!  Scissors beats Paper`);
+                    }else{
+                        console.log('Draw')
+                    }
+                    break;
+                
+                default:
+                    console.log("Unpredictable result");
+                    break;
+            }
+        }
+        
+        function playGame() {
+            for (let index = 0; index < 5; index++) {
+                const computerSelect = getComputerChoice();
+                const humanSelect = getHumanChoice();
+                console.log(`A human choice is: ${humanSelect}`);
+                console.log(`A computer choice is: ${computerSelect}`);
+                playRound(humanSelect, computerSelect);
+                console.log(`A human score is: ${humanScore}`)
+                console.log(`A computer score is: ${computerScore}`)
+                
+            }
+            if(computerScore > humanScore){
+                console.log('Computer win!')
+            }else if(computerScore === humanScore){
+                console.log('Draw between')
+            }else{
+                console.log('Human win')
+            }
+        }
+        playGame()
+        </script>
+</body>
+</html>

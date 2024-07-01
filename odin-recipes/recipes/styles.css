@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(73,45,45) 
+}
+    
+h1 {
+    color : blue;
+    font-size: 22px;
+}
+
+li, a {
+    background-color: rgb(23, 23, 15);
+    color: rgb(255,255,254);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+ul, ol {
+    background-color: rgb(290, 115, 60);
+    font-size: 22px;
+    font-weight: 100;
+}
