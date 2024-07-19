@@ -1,0 +1,2 @@
+It`s a browser version of something between a sketchpad and an Etch-A-Sketch.
+It will allow you hover your mouse over a grid and draw pixel art. Also you can edit your art by double click. Click the button on the top of the screen to change the amount of pixels, max limit is 50x50.

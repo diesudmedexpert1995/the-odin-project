@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.btn {
+    padding: 9px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#container {
+    width: 850px;
+    hegiht: 850px;
+    display: flex;
+    justify-container: center;
+    align-items: center;
+}
+.grid {
+    border: 1px solid black;
+}
