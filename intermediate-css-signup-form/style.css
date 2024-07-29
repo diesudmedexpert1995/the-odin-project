@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Chinese Rocks W00 Wide Shaded";
+    src: url("https://db.onlinewebfonts.com/t/c0dd059419d2084f8ae70026ced7747a.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c0dd059419d2084f8ae70026ced7747a.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #c34545db;
+}
+
+input {
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 1px 1px 2px rgb(183, 183, 183);
+}
+
+button {
+    background-color: #c34545db;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #862f2fdb;
+    color: white;
+  }
+
+#left-panel {
+    display: flex;
+    width: 500px;
+    height: 100vh;
+    flex-shrink: 0;
+    background-image: url("./tyler-lastovich-forrest-background-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo-bg {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    position: relative;
+    bottom: 80px;
+    flex-grow: 1;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#logo {
+    margin: auto;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Chinese Rocks W00 Wide Shaded', sans-serif;
+}
+
+.logo-image {
+    display: block;
+    width: 89px;
+    height: 120px;
+    margin: 15px;
+    margin-left: 18px;
+    margin-right: 12px;
+}
+
+#right-panel {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    background-color: rgb(243, 243, 243);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(55, 55, 55);
+}
+
+#above-form {
+    padding-left: 50px;
+    width: 650px;
+    font-size: x-large;
+}
+
+#form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 2px 2px 4px rgb(113, 113, 113);
+    padding-left: 50px;
+    padding-top: 60px;
+    padding-bottom: 55px;
+}
+
+#below-form {
+    padding-left: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+}
