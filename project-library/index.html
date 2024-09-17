@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/> 
+    <title>Library</title>
+</head>
+<body>
+    <h1>Library project</h1>
+    <div id='newbtn-container'>
+        <button id="newBtn">+ New book</button>
+    </div>
+    <div id='popup'>
+        <form id='form' action='/index.js'>
+            <span class="close">&times;</span>
+            <legend>New Book</legend>
+            <div id='textInput'>
+                <p><input type='text' id='title' name='title' placeholder='Title'></p>
+                <p><input type='text' id='author' name='author' placeholder='Author'></p>
+                <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
+            </div>
+            <div id='checkBox'>
+                <p><label >Read: </label><input type='checkbox' id='read' name='read' value='yes'></p>
+            </div>
+            
+            <button type='submit' form='form' id='addBtn'>Add</button>
+        </form>
+    </div>
+    <div id="library-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
