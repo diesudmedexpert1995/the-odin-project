@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(172, 243, 6, 0.78);
+    color: black;
+    padding: 1rem;
+}
+
+.container {
+    border-radius: .5rem;
+    box-shadow: 0 .25rem .3rem rgba(0, 0, 0, .1);
+    max-width: 25rem;
+    margin: .25rem auto;
+    padding: 1rem;
+    background-color:rgba(2, 245, 245, 0.45);
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    gap: .5rem;
+}
+
+input {
+    flex: 1;
+    border: .2rem solid #ddd;
+    border-radius: .25rem;
+    padding: .5rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0078d7;
+}
+
+button {
+    border: none;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    background: #0078d7;
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    background: #0056b3;
+}
+
+#weatherQueryForm {
+    margin-top: 1.25rem;
+    text-align: left;
+}
+
+#weatherQueryForm h2 {
+    text-align: center;
+    font-size: 0.75rem;
+    color:rgb(168, 155, 180);
+}
+
+.results {
+    margin: auto;
+    width: 50%;
+}
+
+.weatherResult {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-wrap: nowrap;
+}
