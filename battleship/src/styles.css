@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --bg:rgb(5, 9, 248);
+  --fg:rgba(238, 135, 88, 0.97);
+  --ship: hsl(122, 21.00%, 24.30%);
+  --board: hsl(187, 100.00%, 50.00%);
+  --border: hsl(0, 0%, 100%, 0.3);
+  --shot: #fafafa;
+  --ship-shot:rgb(230, 5, 5);
+}
+
+body {
+  font-family: Rubik;
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section:first-child {
+  align-items: flex-end;
+}
+
+#player1,
+#player2 {
+  background: var(--board);
+  border-radius: 3px;
+
+  > div {
+    display: flex;
+  }
+}
+
+div[data-x][data-y] {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+#player1 .ship {
+  background: var(--ship);
+}
+
+.shot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shot::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 0.9rem;
+  aspect-ratio: 1;
+  background: var(--shot);
+}
+
+.shot.ship::after {
+  background: var(--ship-shot);
+}
+
+.pre-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pre-game .ships:has(.draggable) {
+  display: flex;
+  gap: 1rem;
+}
+
+.draggable {
+  display: flex;
+  cursor: move;
+}
+
+.pre-game .ships:has(.draggable[data-orientation="horizontal"]) {
+  flex-direction: column;
+}
+
+.pre-game .ships:has(.draggable[data-orientation="vertical"]) {
+  flex-direction: row;
+
+  .draggable {
+    flex-direction: column;
+  }
+}
+
+.draggable > div {
+  background: var(--ship);
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+}
+
+.pre-game button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  background:rgb(157, 168, 3);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+
+  &:hover {
+    outline: 2px solid var(--fg);
+  }
+}
+
+.dragover {
+  background: var(--ship);
+}
+
+.dragover.overflow,
+#player1 .ship.dragover {
+  background: var(--ship-shot);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  div[data-x][data-y] {
+    width: 1.5rem;
+  }
+
+  .draggable > div {
+    width: 1.5rem;
+  }
+
+  section:first-child {
+    align-items: flex-start;
+  }
+}
