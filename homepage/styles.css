@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(172deg,rgba(11, 187, 231, 0.86) 30%,rgb(186, 255, 252) 21.1%);
+    background-repeat: no-repeat;
+}
+
+header, section, .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+h1 {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+i {
+    cursor: pointer;
+}
+
+.about-me-image-container {
+    float: inline-start;
+    position: relative;
+}
+
+.image-one {
+    max-width: 400px;
+    height: auto;
+    transform: translateX(-60px) scale(1.2);
+}
+
+.about-me-container {
+    padding: 15px 30px;
+    margin: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #FFFFFF;
+}
+
+.about-me-container p {
+    font-size: 1rem;
+}
+
+.about-me-links {
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    font-size: 30px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshot {
+    background-color:rgb(15, 228, 122);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(41, 39, 40);
+    font-size: 1.6rem;
+}
+
+.project-info {
+    padding: 20px;
+    box-shadow: 2px 5px 10px rgba(12, 157, 215, 0.51);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h3 {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.title i {
+    margin: 0 15px;
+    font-size: 1.4rem;
+}
+
+.title a {
+    display: block;
+    height: 25px;
+}
+
+.title img {
+    width: 25px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #0891b2;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 50px 0;
+    space-beetween: 5px;
+}
+
+.footer-container img {
+    margin: 15px;
+}
+
+.contact-me {
+    width: 100%;
+}
+
+.contact-me+img {
+    width: 100%;
+}
+
+.contact-me .address p {
+    margin: 0;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 5px;
+}
+
+.contact-me img {
+    width: 25px;
+}
+
+.contact-me-links {
+    display: flex;
+    margin: 15px;
+    padding: 15px;
+    gap:10px;
+    font-size: 30px;
+    color: #000000;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: 70px;
+    }
+
+    header, section {
+        max-width: 700px;
+    }
+
+    header {
+        display: block;
+    }
+
+    h1 {
+        left: 18rem;
+        right: 0;
+        top: 1.5rem;
+        text-align: center;
+    }
+
+    .about-me-container {
+        text-align: justify;
+        display: block;
+        transform: none;
+    }
+
+    .about-me-image-container {
+        margin-left: -6rem;
+        margin-top: -6rem;
+        margin-right: 1rem;
+        margin-bottom: 0rem;
+        position: initial;
+    }
+
+    .about-me-container img {
+        transform: none;
+        max-width: 350px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .work-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        padding: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 675px) {
+    body {
+        padding-top: 0;
+        background: linear-gradient(167deg, #0891b2 10%, #FFFFFF 10.1%);
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h1 {
+        left: 0;
+        right: 0;
+        top: unset;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .about-me-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .about-me-image-container {
+        float: none;
+        margin: 0;
+        position: relative;
+    }
+    
+    .about-me-container h2 {
+        text-align: center;
+    }
+
+    .image-one {
+        width: 100%;
+        justify-self: center;
+        display: block;
+    }
+
+    .about-me-links {
+        justify-content: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-me-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    body {
+        background: linear-gradient(167deg, #0891b2 7%, #FFFFFF 7.1%);
+    }
+
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container img {
+        margin: 15px;
+        width: 65%;
+        height: 95%;
+    }
+}
