@@ -1,0 +1,93 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+
+
+.form-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.preview-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.cv-preview {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cv-preview h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.cv-preview h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.cv-preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #0077cc;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Flex layout for name + image */
+.cv-preview > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* PRINT STYLING */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .cv-preview,
+  .cv-preview * {
+    visibility: visible;
+  }
+
+  .cv-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    background: white;
+  }
+
+  .cv-preview img {
+    border: none;
+    box-shadow: none;
+  }
+}
