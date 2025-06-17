@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Message board</title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= title %></h1>
+        <section>
+            <div>
+                <a href="/new" class="btn btn-primary">New Message</a>
+            </div>
+            <div>
+                <h3 class="text-center">Last messages</h3>
+                <ul>
+                    <% messages.forEach((message, index) => { %>
+                        <li>
+                            <p><%= message.user %>: <span><%= message.text %></span></p>
+                            <p>Added: <span><%= message.added %></span></p>
+                            <a href="/details/<%= index %>" class="open">Open</a>
+                        </li>
+                <% }); %>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
